@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "inquirer": "^8.2.6"
+  }
+}

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const inquirer = require('inquirer');
 const fs = require('fs');
 
@@ -5,9 +7,9 @@ const fs = require('fs');
     const answers = await inquirer.prompt([
         { name: 'petName', message: "What's your pet's name?", default: 'Pikachu' },
         { name: 'reminderInterval', message: 'Remind to hydrate every (minutes)?', default: 30 },
-        { name: 'personality', type: 'list', message: 'Pick a personality:', choices: ['Chill', 'Cheerful', 'Motivational'] },
+        { name: 'personality', type: 'list', message: 'Pick a personality:', choices: ['Chill', 'Hype', 'Grumpy', 'MadAsF'] },
     ]);
 
     fs.writeFileSync('config.json', JSON.stringify(answers, null, 2));
-    console.log(`✅ Setup complete! Launch your pet with: node pet.js`);
+    console.log(`✅ Setup complete! Launch your pet with: petpet-start`);
 })();
